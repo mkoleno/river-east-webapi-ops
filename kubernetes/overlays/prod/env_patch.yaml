@@ -1,0 +1,12 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: river-east-webapi
+spec:
+  template:
+    spec:
+      containers:
+      - name: river-east-webapi
+        env:
+        - name: environment
+          value: production

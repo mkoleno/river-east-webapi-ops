@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: river-east-webapi
+  labels:
+    app: river-east-webapi
+spec:
+  ports:
+  - name: webapi
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: river-east-webapi
+  type: LoadBalancer

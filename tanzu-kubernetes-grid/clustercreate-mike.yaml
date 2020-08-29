@@ -1,0 +1,16 @@
+apiVersion: run.tanzu.vmware.com/v1alpha1
+kind: TanzuKubernetesCluster
+metadata:
+ name: mikedevcluster
+spec:
+ topology:
+   controlPlane:
+     count: 1
+     class: guaranteed-small
+     storageClass: tanzu-storage-profile
+   workers:
+     count: 1
+     class: guaranteed-large
+     storageClass: tanzu-storage-profile
+ distribution:
+   version: v1.17

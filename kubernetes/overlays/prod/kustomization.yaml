@@ -1,0 +1,12 @@
+apiVerison: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- ../../base/deployment.yaml
+- ../../base/service.yaml
+namespace: river-east-prod
+namePrefix: prod-
+patchesStrategicMerge:
+- resources_patch.yaml
+- env_patch.yaml
+commonLabels:
+  env: prod

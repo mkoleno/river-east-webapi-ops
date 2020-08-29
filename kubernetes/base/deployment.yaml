@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: river-east-webapi
+  labels:
+    app: river-east-webapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: river-east-webapi
+  template:
+    metadata:
+      labels:
+        app: river-east-webapi
+    spec:
+      containers:
+      - image: aheadaviation/river-east-webapi:1.0.0
+        name: river-east-webapi
+        resources: {}

@@ -1,0 +1,13 @@
+apiVersion: kpack.io/v1alpha1
+kind: Image
+metadata:
+  name: river-east-webapi
+spec:
+  builder:
+    name: default
+    kind: ClusterBuilder
+  source:
+    git:
+      url: https://github.com/mkoleno/River-East-WebAPI
+      revision: master
+  tag: aheadaviation/river-east-webapi

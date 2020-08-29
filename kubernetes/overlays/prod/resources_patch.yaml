@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: river-east-webapi
+spec:
+  template:
+    spec:
+      containers:
+      - name: river-east-webapi
+        resources:
+          limits:
+            memory: "256Mi"
+            cpu: "2m"
+          requests:
+            memory: "128Mi"
+            cpu: "1m"
