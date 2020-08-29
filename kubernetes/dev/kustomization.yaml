@@ -3,7 +3,4 @@ kind: Kustomization
 resources:
 - ../base
 namespace: river-east-dev
-images:
-- name: aheadaviation/river-east-webapi
-  newTag: 1.0.0
 namePrefix: dev-

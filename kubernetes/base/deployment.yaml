@@ -15,6 +15,6 @@ spec:
         app: river-east-webapi
     spec:
       containers:
-      - image: aheadaviation/river-east-webapi:1.0.0
+      - image: aheadaviation/river-east-webapi
         name: river-east-webapi
         resources: {}
